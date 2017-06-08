@@ -1,11 +1,14 @@
 package com.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.model.Nominee;
 import com.model.NomineeDataBo;
@@ -43,8 +46,8 @@ public class NomineeDataController extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String x = request.getParameter("nominee_name");
 		String y = request.getParameter("nominee_age");
-		String p = request.getParameter("email_iD");
-		String q = request.getParameter("aadhaar");
+		String p = request.getParameter("email_id");
+		String q = request.getParameter("aadhar");
 		String r = request.getParameter("pancardnumber");
 		String s = request.getParameter("gender");
 		String t = request.getParameter("dateOfBirth");
@@ -73,11 +76,19 @@ public class NomineeDataController extends HttpServlet {
 		NomineeDataBo business = new NomineeDataBo();
 		boolean b1=business.validateAndSave(register);
 		System.out.println(b1);
-		if(b1 ==true)
-			request.getRequestDispatcher("Success.jsp").forward(request,response);
-		else if(b1 == false)
-			request.getRequestDispatcher("Failure.jsp").forward(request,response);
-
+		HttpSession session = request.getSession(true);
+	    session.setAttribute("currentcustomerid", x);
+		if(b1 ==true){
+			out.println("<script type=\"text/javascript\">");
+        out.println("alert('Successfully added nominee');");
+        out.println("</script>");
+	    RequestDispatcher r1 = request.getRequestDispatcher("customer.html");
+	   r1.include(request, response);
+		}	else {
+			out.println("<script type=\"text/javascript\">");
+	        out.println("alert('Not added');");
+	        out.println("</script>");
+		}
 		}
 
 }

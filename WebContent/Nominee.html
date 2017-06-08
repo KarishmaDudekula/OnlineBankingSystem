@@ -1,57 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Add nominee</title>
+<title>Add Nominee</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" 
-
-href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" 
-
-href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="w3.css">
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-
-<link rel="stylesheet" 
-
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <link rel="stylesheet" href="home.css">
-<script 
-
-src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script 
-
-src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script 
-
-src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 body,h1,h5 {font-family: "Raleway", sans-serif}
 
 .w3-allerta {
-  font-family: 
-
-"Allerta Stencil", Sans-serif;
+  font-family: "Allerta Stencil", Sans-serif;
   font-size: 80px;
 }
 
 body, html{height: 100%}
 
-
-
 h4, .close {
     background-color: black;
     color:white !important;
     text-align: center;
-    
-
-font-size: 30px;
+    font-size: 30px;
     height: 100%
 }
 
@@ -62,9 +39,7 @@ font-size: 30px;
   background: white;
   align-content: center;
   padding-right: 0px;
-  
-
-padding-left: 0px;
+  padding-left: 0px;
 }
 
 .container-header {
@@ -72,41 +47,34 @@ padding-left: 0px;
     color:white !important;
     text-align: center;
     font-size: 30px;
+	border: 5px solid white;
 }
 
 .container-footer {
-      
-
-background-color: #f9f9f9;
+      background-color: #f9f9f9;
 }
 
 </style>
 </head>
 
-<body class="w3-black">
+<body class = "w3-black">
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 
-<nav class="w3-sidebar w3-bar-block w3-small w3-
-
-hide-small w3-center">
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
 
   <!-- Avatar image in top left corner -->
 
-  <img id = "logo_img" src="Images/logo(1).jpeg" >
-<br><br><br><br><br>
+   <img id = "logo_img" src= "Images/logo(1).jpeg" >
+<br><br><br><br>
 
-  <a href="home.html" class="w3-bar-item 
-
-w3-button w3-padding-large w3-hover-black">
+  <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
 
     <i class="fa fa-home w3-xxlarge"></i>
 
     <p>HOME</p>
   </a>
  
- <a href="about.html" class="w3-bar-item w3-button w3-
-
-padding-large w3-hover-black">
+ <a href="about.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
 
     <i class="fa fa-user w3-xxlarge"></i>
 
@@ -114,9 +82,7 @@ padding-large w3-hover-black">
   </a>
 
  
-  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large 
-
-w3-hover-black">
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
 
     <i class="fa fa-envelope w3-xxlarge"></i>
 
@@ -127,15 +93,11 @@ w3-hover-black">
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 
-<div 
-
-class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
 
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
 
-    <a href="home.html" 
-
-class="w3-bar-item w3-button">HOME</a>
+    <a href="home.html" class="w3-bar-item w3-button">HOME</a>
 
     <a href="about.html" class="w3-bar-item w3-button">ABOUT</a>
 
@@ -144,44 +106,49 @@ class="w3-bar-item w3-button">HOME</a>
   </div>
 </div>
 
+
+
+</div>
 <section class="bgimg w3-display-container w3-text-black "> 
   <br><br><br>
   <section class="container">
     <section class="container-header" style="padding:35px 50px;">
-      <h4> Add Nominee</h4>
+      <h4><span class="glyphicon glyphicon-pencil"></span> ADD NOMINEE</h4>
     </section>
+
     <section class="container-body" style="padding:40px 50px;">
       <form role="form" action = "NomineeDataController" method = "post">
-	
         <section class="form-group">
           <label for="nominee_name"><span class="glyphicon glyphicon-user"></span> Nominee Name</label>
-          <input type="text" class="form-control"  name ="nominee_name" required="" placeholder="Enter Nominee Name">
+          <input type="text" class="form-control" name ="nominee_name" required="" placeholder="Enter Nominee Name">
         </section>
 
-<section class="form-group">
+        <section class="form-group">
           <label for="nominee_age"><span class="glyphicon glyphicon-user"></span> Nominee Age</label>
-          <input type="text" class="form-control" name ="nominee_age" required="" placeholder="Enter Nominee Age">
+          <input type="text" class="form-control" name = "nominee_age" required="" placeholder="Enter Nominee age">
+        </section>
+
+        <section class="form-group">
+          <label for="email_id"><span class="glyphicon glyphicon-envelope"></span> Email ID</label>
+          <input type="email" class="form-control"  name = "email_id" required="" placeholder="Enter Email ID">
         </section>
         <section class="form-group">
-          <label for="email_id"><span class="glyphicon glyphicon-envelope"></span> Nominee Email ID</label>
-          <input type="email" class="form-control" name ="email_id" required="" placeholder="Enter Email ID">
+      <label for="aadhar"><span class="glyphicon glyphicon-th"></span> Nominee Aadhaar Number</label>
+          <input type="text" class="form-control"  name = "aadhar" required="" placeholder="Enter Aadhaar Number">
         </section>
+
 	<section class="form-group">
-          <label for="aadhar"><span class="glyphicon glyphicon-credit-card"></span> Nominee Aadhar Number</label>
-          <input type="text" class="form-control" name ="aadhar" required="" placeholder="Enter Aadhar Number">
-        </section>
-	<section class="form-group">
-          <label for="pancardnumber"><span class="glyphicon glyphicon-credit-card"></span> Nominee PAN Number</label>
-          <input type="text" class="form-control" name ="pancardnumber" required="" placeholder="Enter PAN Number">
+          <label for="pancardnumber"><span class="glyphicon glyphicon-th"></span> Nominee Pan Number</label>
+          <input type="text" class="form-control" name ="pancardnumber" required="" placeholder="Enter Nominee Pan Number">
         </section>
         <section class="form-group">
           <label for="gender"><span class="glyphicon glyphicon-user"></span> Gender</label>
           <br>
           <label class="radio-inline">
-            <input type="radio" name="gender"> Male
+            <input type="radio" value = "Male" name="gender"> Male
           </label>
           <label class="radio-inline">
-            <input type="radio" name="gender"> Female
+            <input type="radio" value = "Female" name="gender"> Female
           </label>
         </section>
 
@@ -189,46 +156,56 @@ class="w3-bar-item w3-button">HOME</a>
           <label for="dateOfBirth"><span class="glyphicon glyphicon-calendar"></span> Date Of Birth</label>
           <input type="date" class="form-control" name ="dateOfBirth" placeholder="Enter Date of Birth">
         </section>
+
          <section class="form-group">
-          <label for="phonenumber"><span class="glyphicon glyphicon-phone"></span> Contact Number</label>
-          <input type="tel" class="form-control" name ="phonenumber" maxlength="10" required="" placeholder="Enter Nominee Number">
-     </section>
-	<section class="form-group">
-          <label for="address"><span class="glyphicon glyphicon-map-marker"></span> Nominee Address</label>
-<input type="text" class="form-control" name ="address"  placeholder="Enter Nominee Address">
+          <label for="phonenumber"><span class="glyphicon glyphicon-phone"></span> Phone number</label>
+          <input type="tel" class="form-control" name = "phonenumber" maxlength="10" required="" placeholder="Enter Phone Number">
         </section>
+        
+	<section class="form-group">
+          <label for="address"><span class="glyphicon glyphicon-globe"></span> Nominee Address</label>
+          <input type="text" class="form-control" name ="address" required="" placeholder="Enter Nominee Address">
+        </section>
+
 	<section class="form-group">
           <label for="occupation"><span class="glyphicon glyphicon-user"></span> Nominee Occupation</label>
-          <input type="text" class="form-control" name ="occupation"required="" placeholder="Enter Nominee Occupation">
+          <input type="text" class="form-control" name ="occupation" required="" placeholder="Enter Nominee Occupation">
         </section>
+	
 	<section class="form-group">
           <label for="marital_status"><span class="glyphicon glyphicon-user"></span> Marital Status</label>
-         <br>
+          <br>
           <label class="radio-inline">
-            <input type="radio" name="optradio"> Married
+            <input type="radio" value = "Married" name="marital_status"> Married
           </label>
           <label class="radio-inline">
-            <input type="radio" name="optradio"> Unmarried
-</label>
+            <input type="radio" value = "Unmarried" name="marital_status"> Unmarried
+          </label>
         </section>
+
 	<section class="form-group">
-          <label for="state"><span class="glyphicon glyphicon-globe"></span> State</label>
-<input type="text" class="form-control" name ="state" required="" placeholder="Enter your State">
+          <label for="state"><span class="glyphicon glyphicon-globe"></span> Nominee State</label>
+          <input type="text" class="form-control" name ="state" required="" placeholder="Enter Nominee State">
         </section>
+
 	<section class="form-group">
-      <label for="country"><span class="glyphicon glyphicon-globe"></span> Country</label>
-          <input type="text" class="form-control" name ="country"  required="" placeholder="Enter your country">
+          <label for="country"><span class="glyphicon glyphicon-globe"></span> Nominee Country</label>
+          <input type="text" class="form-control" name ="country" required="" placeholder="Enter Nominee Country">
         </section>
+
 	<section class="form-group">
-          <label for="pincode"><span class="glyphicon glyphicon-th"></span> Pincode</label>
-          <input type="number" class="form-control" name ="pincode"  required="" placeholder="Enter Pincode">
-</section>
-        <button type="submit">Done</button>
-         <input type="checkbox" checked="checked"> 
+          <label for="pincode"><span class="glyphicon glyphicon-th"></span> Pin code</label>
+          <input type="text" class="form-control" name ="pincode" required="" placeholder="Enter Pin Code">
+        </section> 	
+
+        <button type="submit" class="btn btn-basic btn-block"><span class="glyphicon glyphicon-ok"></span> Done </button>
+
       </form>
     </section>
-      
 </section> 
 </section>
+
+
+
 </body>
 </html>
