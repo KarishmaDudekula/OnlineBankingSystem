@@ -25,39 +25,23 @@
     <div align="center">
         <table border="1" cellpadding="5">
             <caption> Customer Details </caption>
-            <tr>
-                <th>first_name</th>
-                <th>last_name</th>
-                <th>gender</th>
-                <th>email_id</th>
-                <th>pancard_number</th>
-                <th>aadhaarcard_number</th>
-                <th>date_of_birth</th>
-                <th>occupation</th>
-                <th>marital_status</th>
-                <th>address</th>
-                <th>city</th>
-                <th>state</th>
-                <th>country</th>
-                <th>pincode</th>                
-            </tr>
             <c:forEach var="row" items="${users.rows}">
-              <tr>
-   <td> <c:out value="${row.first_name}" /></td>
-   <td> <c:out value="${row.last_name}" /></td>
-   <td> <c:out value="${row.gender}" /></td>
-   <td> <c:out value="${row.email_id}" /></td>
-   <td> <c:out value="${row.pancard_number}" /></td>
-   <td> <c:out value="${row.aadhaarcard_number}" /></td>
-   <td> <c:out value="${row.date_of_birth}" /></td>
-   <td> <c:out value="${row.occupation}" /></td>
-   <td> <c:out value="${row.marital_status}" /></td>
-   <td> <c:out value="${row.address}" /></td>
-   <td> <c:out value="${row.city}" /></td>
-   <td> <c:out value="${row.state}" /></td>
-   <td> <c:out value="${row.country}" /></td>
-   <td> <c:out value="${row.pincode}" /></td>
-   </tr>
+            <td>
+                <tr><th>First Name</th><td> <c:out value="${row.first_name}" /></td></tr>    
+                <tr><th>Last Name</th><td> <c:out value="${row.last_name}" /></td></tr>
+                <tr><th>Gender</th><td> <c:out value="${row.gender}" /></td></tr>
+                <tr><th>Email id</th><td> <c:out value="${row.email_id}" /></td></tr>
+                <tr><th>Pan Card Number</th><td> <c:out value="${row.pancard_number}" /></td></tr>
+                <tr><th>Aadhaar Card Number</th><td> <c:out value="${row.aadhaarcard_number}" /></td></tr>
+                <tr><th>Date of Birth</th><td> <c:out value="${row.date_of_birth}" /></td></tr>
+                <tr><th>Occupation</th><td> <c:out value="${row.occupation}" /></td></tr>
+                <tr><th>Marital Status</th><td> <c:out value="${row.marital_status}" /></td></tr>
+                <tr><th>Address</th><td> <c:out value="${row.address}" /></td></tr>
+                <tr><th>City</th><td> <c:out value="${row.city}" /></td></tr>
+                <tr><th>State</th><td> <c:out value="${row.state}" /></td></tr>
+                <tr><th>Country</th><td> <c:out value="${row.country}" /></td><br></tr>
+                <tr><th>Pin Code</th><td> <c:out value="${row.pincode}" /></td><br></tr>              
+            </td>
 </c:forEach>
         </table>
     </div>
@@ -73,21 +57,27 @@
     <div align="center">
         <table border="1" cellpadding="5">
             <caption> Account Details </caption>
-            <tr>
-                <th>account_number</th>
-                <th>account_type</th>
-                <th>open_date</th>
-                <th>branch_id</th>
-                <th>balance</th>                
-            </tr>
             <c:forEach var="row" items="${account.rows}">
-              <tr>
-   <td> <c:out value="${row.account_number}" /></td>
-   <td> <c:out value="${row.account_type}" /></td>
-   <td> <c:out value="${row.open_date}" /></td>
-   <td> <c:out value="${row.branch_id}" /></td>
-   <td> <c:out value="${row.balance}" /></td>
-   </tr>
+            <td>
+                <tr><th>Account Number</th>
+                <td> <c:out value="${row.account_number}" /></td></tr>
+                <tr><th>Account Type</th>
+                <td> <c:out value="${row.account_type}" /></td></tr>
+                <tr><th>Account Opened Date</th>
+                <td> <c:out value="${row.open_date}" /></td></tr>
+                <tr><th>Branch id</th>
+                <td> <c:out value="${row.branch_id}" /></td></tr>
+                <tr><th>Balance</th> 
+                <td> <c:out value="${row.balance}" /></td></tr>            
+            </td>
+            
+              <td>
+   
+   
+   
+   
+   
+   </td>
 </c:forEach>
         </table>
     </div>
