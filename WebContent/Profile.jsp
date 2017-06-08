@@ -19,25 +19,44 @@
      
     <sql:query var="users"   dataSource="${myDS}">
     
-        select first_name,last_name,gender,email_id,pancard_number,aadharcard_number,date_of_birth,occupation,marital_status,address,city,state,country,pincode from customer_details where customer_id = <%=request.getSession().getAttribute("currentcustomerid")%>;
+        select first_name,last_name,gender,email_id,pancard_number,aadhaarcard_number,date_of_birth,occupation,marital_status,address,city,state,country,pincode from customer_details where customer_id = <%=request.getSession().getAttribute("currentcustomerid")%>;
     </sql:query>
      
     <div align="center">
         <table border="1" cellpadding="5">
-            <caption><h3> Mini Statement </h3></caption>
+            <caption> Customer Details </caption>
             <tr>
-                <th>transaction_id</th>
-               
-                <th>transaction_date</th>
-                <th>transaction_type</th>
-                <th>transaction_amount</th>
+                <th>first_name</th>
+                <th>last_name</th>
+                <th>gender</th>
+                <th>email_id</th>
+                <th>pancard_number</th>
+                <th>aadhaarcard_number</th>
+                <th>date_of_birth</th>
+                <th>occupation</th>
+                <th>marital_status</th>
+                <th>address</th>
+                <th>city</th>
+                <th>state</th>
+                <th>country</th>
+                <th>pincode</th>                
             </tr>
             <c:forEach var="row" items="${users.rows}">
               <tr>
-   <td> <c:out value="${row.transaction_id}" /></td>
- <td>   <c:out value="${row.transaction_date}" /></td>
-    <td> <c:out value="${row.transaction_type}" /></td>
-   <td> <c:out value="${row.transaction_amount}" /></td>
+   <td> <c:out value="${row.first_name}" /></td>
+   <td> <c:out value="${row.last_name}" /></td>
+   <td> <c:out value="${row.gender}" /></td>
+   <td> <c:out value="${row.email_id}" /></td>
+   <td> <c:out value="${row.pancard_number}" /></td>
+   <td> <c:out value="${row.aadhaarcard_number}" /></td>
+   <td> <c:out value="${row.date_of_birth}" /></td>
+   <td> <c:out value="${row.occupation}" /></td>
+   <td> <c:out value="${row.marital_status}" /></td>
+   <td> <c:out value="${row.address}" /></td>
+   <td> <c:out value="${row.city}" /></td>
+   <td> <c:out value="${row.state}" /></td>
+   <td> <c:out value="${row.country}" /></td>
+   <td> <c:out value="${row.pincode}" /></td>
    </tr>
 </c:forEach>
         </table>
