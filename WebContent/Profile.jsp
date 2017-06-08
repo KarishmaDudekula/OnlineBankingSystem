@@ -61,5 +61,35 @@
 </c:forEach>
         </table>
     </div>
+    
+<br>
+<br>
+    
+<sql:query var="account"   dataSource="${myDS}">
+    
+        select account_number, account_type, open_date, branch_id, balance from account_details where customer_id = <%=request.getSession().getAttribute("currentcustomerid")%>;
+    </sql:query>
+     
+    <div align="center">
+        <table border="1" cellpadding="5">
+            <caption> Account Details </caption>
+            <tr>
+                <th>account_number</th>
+                <th>account_type</th>
+                <th>open_date</th>
+                <th>branch_id</th>
+                <th>balance</th>                
+            </tr>
+            <c:forEach var="row" items="${account.rows}">
+              <tr>
+   <td> <c:out value="${row.account_number}" /></td>
+   <td> <c:out value="${row.account_type}" /></td>
+   <td> <c:out value="${row.open_date}" /></td>
+   <td> <c:out value="${row.branch_id}" /></td>
+   <td> <c:out value="${row.balance}" /></td>
+   </tr>
+</c:forEach>
+        </table>
+    </div>
 </body>
 </html>
