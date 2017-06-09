@@ -6,8 +6,9 @@
     <welcome-file>index.htm</welcome-file>
     <welcome-file>customerLogin.html</welcome-file>
     <welcome-file>customer.html</welcome-file>
-    <welcome-file>Sucess.jsp</welcome-file>
-    <welcome-file>Nominee.html</welcome-file>
+    <welcome-file>Success.jsp</welcome-file>
+   <welcome-file>Nominee.html</welcome-file>
+    <welcome-file>admin.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.html</welcome-file>
   </welcome-file-list>
