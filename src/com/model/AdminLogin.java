@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/AdminLogin")
 public class AdminLogin extends HttpServlet {
-	String username;
+	String admin_id;
 	String password;
-	public String getusername() {
-		return username;
+	public String getadmin_id() {
+		return admin_id;
 	}
 
-	public void setusername(String username) {
-		this.username = username;
+	public void setusername(String admin_id) {
+		this.admin_id = admin_id;
 	}
 
 	public String getPassword() {

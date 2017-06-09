@@ -21,7 +21,7 @@ import com.model.AdminLogin;
 @WebServlet("/AdminDataDAO")
 public class AdminDataDAO extends HttpServlet {
     public boolean save(AdminLogin data){
-        String admin_id = data.getusername();
+        String admin_id = data.getadmin_id();
         String password = data.getPassword();
         System.out.println(admin_id);
         System.out.println(password);
