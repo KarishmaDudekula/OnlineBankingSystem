@@ -141,7 +141,7 @@ h4, .close {
         <table border="1" cellpadding="5">
             <caption><h4> Current Balance </h4></caption>
             <tr>
-                <th>  balance  </th>
+                <th>  balance </th>
 
                 
             </tr>

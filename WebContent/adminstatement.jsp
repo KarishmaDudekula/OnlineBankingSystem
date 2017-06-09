@@ -137,12 +137,12 @@ h4, .close {
 String customer_id = request.getParameter("customer_id"); 
 session.setAttribute("currentcustomer",customer_id); 
 %> 
-        select * from transaction_details where customer_id = <%=request.getSession().getAttribute("currentcustomer")%> order by transaction_id desc limit 10;
+  select * from transaction_details where customer_id = <%=request.getSession().getAttribute("currentcustomer")%>;
     </sql:query>
      
     <div align="center">
         <table border="1" cellpadding="5">
-            <caption><h4> Mini Statement </h4></caption>
+            <caption><h4> Transaction details </h4></caption>
             <tr>
                 <th>transaction_id</th>
                

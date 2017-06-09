@@ -138,7 +138,7 @@ h4, .close {
     session.setAttribute("Currentcustomer",customer_id);
     %>
     
-        select first_name,last_name,gender,email_id,pancard_number,aadhaarcard_number,date_of_birth,occupation,marital_status,address,city,state,country,pincode from customer_details where customer_id = <%=request.getSession().getAttribute("currentcustomerid")%>;
+        select first_name,last_name,gender,email_id,pancard_number,aadhaarcard_number,date_of_birth,occupation,marital_status,address,city,state,country,pincode from customer_details where customer_id = <%=request.getSession().getAttribute("Currentcustomer")%>;
     </sql:query>
      
     <div align="center">

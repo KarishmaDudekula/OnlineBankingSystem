@@ -21,9 +21,9 @@ import com.model.AdminLogin;
 @WebServlet("/AdminDataDAO")
 public class AdminDataDAO extends HttpServlet {
     public boolean save(AdminLogin data){
-        String username = data.getusername();
+        String admin_id = data.getusername();
         String password = data.getPassword();
-        System.out.println(username);
+        System.out.println(admin_id);
         System.out.println(password);
         //String UserNameDB = "";
        // String passwordDB = "";
@@ -32,9 +32,9 @@ public class AdminDataDAO extends HttpServlet {
         ResultSet resultSet = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/onlinebank", "root","pooja10");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankingsystem", "root","pooja10");
             statement  = con.createStatement();
-            resultSet = statement.executeQuery("select * from admin where username = '" + username +"'");
+            resultSet = statement.executeQuery("select * from admin_login where admin_id = '" + admin_id +"'");
             
             if(resultSet.next()){
                 //UserNameDB = resultSet.getString("UserName"); //fetch the values present in database

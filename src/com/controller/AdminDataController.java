@@ -46,7 +46,7 @@ public class AdminDataController extends HttpServlet {
 		if (business1 == true)
 		    request.getRequestDispatcher("admin.html").forward(request, response);    
 		else
-			request.getRequestDispatcher("failure.jsp").forward(request,response);
+			request.getRequestDispatcher("Failure.jsp").forward(request,response);
 			
 	}
 
