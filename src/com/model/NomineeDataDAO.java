@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class NomineeDataDAO
@@ -59,7 +60,7 @@ public class NomineeDataDAO extends HttpServlet {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bankingsystem", "root","pooja10");
-			PreparedStatement pstmt = con.prepareStatement(sql);	
+			PreparedStatement pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, nominee_name);
 			pstmt.setString(2, nominee_age);
 			pstmt.setString(3, email_id);	
@@ -83,7 +84,7 @@ public class NomineeDataDAO extends HttpServlet {
 			e.printStackTrace();
 		}
 		if (noOfRowsAffected > 0){
-			return true;
+		    return true;
 		}
 		return false;
 	}

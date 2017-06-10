@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-
 <title>CUSTOMER SERVICES</title>
 
 <meta charset="UTF-8">
@@ -28,6 +27,16 @@ margin-bottom: 12px
 
 .w3-sidebar {
 width: 120px;background: #222;
+}
+button {
+	float :right;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
 }
 
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
@@ -73,7 +82,13 @@ margin-left: 120px
   </a>
 </nav>
 
-
+<div class="w3-container">
+<header class="w3-container w3-padding-12 w3-center w3-black" id="home">
+<form method="get" action="home.html">
+    <p><button type="submit" class="w3-button w3-light-grey" > Logout</button></p>
+</form>
+</header>
+</div>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 
@@ -111,7 +126,7 @@ margin-left: 120px
  
    <p>Detailed Statement</p>
 
-<a href="fixeddeposit.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+<a href="FixedDeposit.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
 
     <br><br><i class="fa fa-dot-circle-o" style="font-size:48px;color:white"></i>
 
@@ -136,9 +151,6 @@ margin-left: 120px
 
     <p>MINI STATEMENT</p>
   </a>
-
-  
-
 <a href="Balance.jsp" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
 
     <i class="fa fa-money" style="font-size:48px;color:white">

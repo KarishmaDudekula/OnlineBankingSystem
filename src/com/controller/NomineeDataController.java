@@ -75,20 +75,23 @@ public class NomineeDataController extends HttpServlet {
 		register.setPincode(d);
 		NomineeDataBo business = new NomineeDataBo();
 		boolean b1=business.validateAndSave(register);
-		System.out.println(b1);
 		HttpSession session = request.getSession(true);
-	    session.setAttribute("currentcustomerid", x);
+		String id = (String) session.getAttribute("currentcustomerid");
+		System.out.println(b1);
 		if(b1 ==true){
-			out.println("<script type=\"text/javascript\">");
-        out.println("alert('Successfully added nominee');");
-        out.println("</script>");
-	    RequestDispatcher r1 = request.getRequestDispatcher("customer.html");
-	   r1.include(request, response);
-		}	else {
+	      out.println("<script type=\"text/javascript\">");
+          out.println("alert('Successfully added nominee');");
+          out.println("</script>");
+	      RequestDispatcher r1 = request.getRequestDispatcher("customer.html");
+	      r1.include(request, response);
+		}else {
 			out.println("<script type=\"text/javascript\">");
 	        out.println("alert('Not added');");
 	        out.println("</script>");
+	        RequestDispatcher r1 = request.getRequestDispatcher("customer.html");
+	 	   r1.include(request, response);
 		}
-		}
+	}
+	
 
 }
