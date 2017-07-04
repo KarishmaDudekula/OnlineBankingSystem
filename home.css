@@ -1,0 +1,97 @@
+a{
+    width:25%;
+}
+body, h1{
+    font-family: Montserrat, sans-serif
+
+}
+.w3-row-padding img {
+    margin-bottom: 0px
+}
+.w3-sidebar {
+    width: 120px;
+    background: #222;
+}
+#main {
+    margin-left: 120px
+}
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+#logo_img{
+    width:100%;
+}
+
+#main_img {
+    width :1108
+    height:200
+}
+
+#about_img {
+    width: 70%;
+    height:250px;
+    margin-right:0;
+
+}
+.w3-button{
+    width:150px;
+    float: right;
+}
+
+#hr{
+    width:200px;
+}
+
+#button1{
+    margin-right:0px;
+    float:right;
+}
+#button2{
+    margin-right:16px;
+}
+#h1{
+    margin: 0 0 30px 0;
+}
+.dropbtn {
+    background-color:#d3d3d3;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #a9a9a9;
+}
+
+.dropdown {
+    float: right;
+    position: relative;
+    display: inline-block;
+   
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	width:100%;
+}
+
+.dropdown a:hover {background-color: #f1f1f1;
+	width:100%;
+	}
+
+.show {display:block;}
